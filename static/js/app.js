@@ -27,3 +27,34 @@ function buildTable(data) {
         });
     });
 }
+
+
+// function to handle clicks and filters
+function handleClick() {
+
+    // add variables for dates
+    // select the element with ID datetime and get the value from that element
+    let date = d3.select("#datetime").property("value");
+
+    // set default filter for the updated table data based on the filter. We are starting with the original const table data that we set in the first line of the code. 
+    let filteredData = tableData;
+
+    // check if date has been set if not return all data
+    if (date) { 
+        
+        // look at each datetime row in the data and if the date value matches keep that data 
+        //'===' is strict equality which means the types have to match vs '==' which is loose equality so types do not have to match. 
+        filteredData = filteredData.filter(row => row.datetime === date);
+    };
+
+    // create table from the filtered data
+    // call buildTable() @NOTE: if no data entered, filteredData will be original table data
+    buildTable(filteredData);
+};
+
+// listen for button click on filter button
+d3.selectAll('#filter-btn').on("click", handleClick);
+
+// build the original table on page load
+buildTable(tableData);
+
