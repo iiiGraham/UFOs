@@ -11,7 +11,7 @@ Users can filter data based on 5 criteria by typing in values into text input bo
 
 Additional filters can be added by typing in options in other filter input fields. 
 
-![Adding a Date Filter](two_filter.png)
+![Adding a Date Filter](two_filter.png) 
 
 ### Summary
 One drawback of the new design is how specific the filters need to be to handle user input. For example, a filter for USA will return nothing because all data from the United States is in the table as "us". Unless the case matches exactly the table will not return any information which could be confusing to users visiting the site. 
