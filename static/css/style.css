@@ -1,0 +1,16 @@
+/* css structure = element, class attirbute, or id attribute: value;
+    below = body { attribute: value; }*/
+
+body {
+    color: #f7f7f7;
+}
+
+.jumbotron {
+    background-image: url("../images/nasa.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+/*#filter-btn {
+    text-align: center;
+}*/
